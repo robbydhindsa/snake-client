@@ -14,6 +14,11 @@ const connect = function () {
     console.log(data);
   });
 
+  conn.on("connect", () => {
+    console.log("Succesfully connected to game server");
+    conn.write("Name: RSD");
+  });
+
   return conn;
 };
 
