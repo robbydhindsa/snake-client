@@ -17,6 +17,12 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Succesfully connected to game server");
     conn.write("Name: RSD");
+    // setTimeout(() => {
+    //   conn.write("Move: up");
+    // }, 50);
+    // setTimeout(() => {
+    //   conn.write("Move: up");
+    // }, 100);
   });
 
   return conn;
